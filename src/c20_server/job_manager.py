@@ -7,7 +7,7 @@ from c20_server.job import NoneJob
 class JobManager:
 
     def __init__(self, database):
-        self.r_database = database
+        self.r_database = database.r_database
         self.job_queue = JobQueue(self.r_database)
         self.in_progress_jobs = InProgress(self.r_database)
 
